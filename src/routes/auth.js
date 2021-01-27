@@ -5,10 +5,10 @@ const router = express.Router()
 
 
 //post auth singup
-router.post('/singup', async (request, response) => {
+router.post('/signup', async (request, response) => {
    try{
        const { email, password } = request.body
-       const userCreated = await auth.singup (email, password)
+       const userCreated = await auth.signup (email, password)
 
        response.json({
            success:  true,

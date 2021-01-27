@@ -6,7 +6,7 @@ const User = require('../models/users')
 
 async function signup (email, password) {
     const passwordEncripted = await bcrypt.hash(password, 10)
-    return Users.create({ email, password: passwordEncripted })
+    return User.create({ email, password: passwordEncripted })
 }
 
 async function login (email, password) {

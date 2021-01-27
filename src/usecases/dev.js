@@ -7,7 +7,7 @@ function getAll () {
 }
 
 function create (post) {
-    return Dev.create( { post } )
+    return Dev.create({ post })
 }
 
 
