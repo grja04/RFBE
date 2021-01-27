@@ -7,7 +7,7 @@ function auth (request, response, next){
         if (!token) {
             throw new Error('Token required')
         }
-        const payloadDecoded = jwt.veryfy (token, 'dev123')
+        const payloadDecoded = jwt.veryfy (token, JWT_SECRET)
 
         if (!payloadDecoded) {
             throw new Error('Invalid token')
